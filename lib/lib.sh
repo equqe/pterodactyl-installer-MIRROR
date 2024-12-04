@@ -129,7 +129,7 @@ welcome() {
   output "https://github.com/pterodactyl-installer/pterodactyl-installer"
   output ""
   output "This script is not associated with the official Pterodactyl Project."
-  output "123"
+  output "321"
   output "Running $OS version $OS_VER."
   if [ "$1" == "panel" ]; then
     output "Latest pterodactyl/panel is $PTERODACTYL_PANEL_VERSION"
