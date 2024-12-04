@@ -155,6 +155,8 @@ get_latest_versions() {
 
 update_lib_source() {
   GITHUB_URL="$GITHUB_BASE_URL/$GITHUB_SOURCE"
+  echo "$GITHUB_BASE_URL"
+  echo "$GITHUB_SOURCE"
   echo "$GITHUB_URL"
   echo "$GITHUB_URL"/lib/lib.sh
   rm -rf /tmp/lib.sh
