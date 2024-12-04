@@ -32,7 +32,7 @@ set -e
 # ------------------ Variables ----------------- #
 
 # Versioning
-export GITHUB_SOURCE=${GITHUB_SOURCE:-master}
+export GITHUB_SOURCE="master"
 export SCRIPT_RELEASE=${SCRIPT_RELEASE:-canary}
 
 # Pterodactyl versions
