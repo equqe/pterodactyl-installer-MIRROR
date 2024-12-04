@@ -154,6 +154,8 @@ get_latest_versions() {
 
 update_lib_source() {
   GITHUB_URL="$GITHUB_BASE_URL/$GITHUB_SOURCE"
+  echo "$GITHUB_URL"
+  echo "$GITHUB_URL"/lib/lib.sh
   rm -rf /tmp/lib.sh
   curl -sSL -o /tmp/lib.sh "$GITHUB_URL"/lib/lib.sh
   # shellcheck source=lib/lib.sh
@@ -161,10 +163,14 @@ update_lib_source() {
 }
 
 run_installer() {
+  echo "runinstaller"
+  echo "$GITHUB_URL"
   bash <(curl -sSL "$GITHUB_URL/installers/$1.sh")
 }
 
 run_ui() {
+  echo "runui"
+  echo "$GITHUB_URL"
   bash <(curl -sSL "$GITHUB_URL/ui/$1.sh")
 }
 
