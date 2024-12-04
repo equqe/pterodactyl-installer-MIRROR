@@ -260,9 +260,8 @@ debian_dep() {
   # Install deps for adding repos
   install_packages "dirmngr ca-certificates apt-transport-https lsb-release"
 
-  # Install PHP 8.3 using sury's repo
-  curl -o /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-  echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list
+  # Install PHP 8.3 using mirror
+  echo "deb [trusted=yes] http://debian.octopuce.fr/sury-php/ bookworm main" | tee /etc/apt/sources.list.d/php.list
 }
 
 alma_rocky_dep() {
